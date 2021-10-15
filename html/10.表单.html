@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录注册</title>
+</head>
+<body>
+
+<h1>注册</h1>
+<!--表单 form
+    action：表单提交的位置，可以是网站，也可以是一个请求处理地址
+    method：提交表单使用的http方法
+
+    get方式提交表单：
+    .../1.myFirstHtml.html?user=ming&pwd=123456
+    post方式：
+        比较安全
+        可以提交大文件
+-->
+<form action="1.myFirstHtml.html" method="get">
+    <table border="1" cellpadding="6px">
+        <tr>
+            <td>用户名：</td>
+            <!-- 文本框 -->
+            <td><input type="text" name="user" value="skyey" autofocus maxlength="8" size="12"></td>
+        </tr>
+        <tr>
+            <td>密码：</td>
+            <!-- 密码框 -->
+            <td><input type="password" name="pwd" placeholder="password" size="12"></td>
+        </tr>
+        <tr>
+            <td>性别：</td>
+            <td>
+                <!-- 单选框 type="radio"，name值相同的单选框才能形成单选 -->
+                <input type="radio" name="gender" value="male" checked>男
+                <input type="radio" name="gender" value="female">女
+            </td>
+        </tr>
+        <tr>
+            <td>爱好：</td>
+            <!-- 多选框 type="checkbox" -->
+            <td><input type="checkbox" name="hobby" value="sleep">睡觉
+            <input type="checkbox" name="hobby" value="music">听歌
+            <input type="checkbox" name="hobby" value="chat">聊天
+            <input type="checkbox" name="hobby" value="game" checked>游戏</td>
+        </tr>
+        <tr>
+            <td><input type="button" name="btn" value="这是一个按钮"></td>
+            <td><input type="image" src="../resource/img/IMG_0076.JPG"></td>
+        </tr>
+        <tr>
+            <!-- 下拉框 -->
+            <td>国家：</td>
+            <td><select name="nationality">
+                    <option value="CN">中国</option>
+                    <option value="us">美国</option>
+                    <option value="Switzerland" selected>瑞士</option>
+                    <option value="India">印度</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">反馈：
+            <!-- 文本域 -->
+            <textarea name="feedback" cols="32" rows="5"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <!-- 文件 -->
+                <input name="files" type="file">
+                <input type="button" name="upload" value="上传">
+            </td>
+        </tr>
+        <tr>
+            <!-- 提交 -->
+            <td><input type="submit"></td>
+            <!-- 重置 -->
+            <td><input type="reset" value="清空表单"></td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
