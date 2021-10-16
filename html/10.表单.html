@@ -22,18 +22,18 @@
         <tr>
             <td>用户名：</td>
             <!-- 文本框 -->
-            <td><input type="text" name="user" value="skyey" autofocus maxlength="8" size="12"></td>
+            <td><input type="text" name="user" value="skyey" readonly maxlength="8" size="12"></td>
         </tr>
         <tr>
             <td>密码：</td>
             <!-- 密码框 -->
-            <td><input type="password" name="pwd" placeholder="password" size="12"></td>
+            <td><input type="password" name="pwd" autofocus placeholder="请输入密码" size="12" required></td>
         </tr>
         <tr>
             <td>性别：</td>
             <td>
                 <!-- 单选框 type="radio"，name值相同的单选框才能形成单选 -->
-                <input type="radio" name="gender" value="male" checked>男
+                <input type="radio" name="gender" value="male" checked disabled>男
                 <input type="radio" name="gender" value="female">女
             </td>
         </tr>
@@ -69,15 +69,23 @@
         <tr>
             <td colspan="2">
                 <!-- 文件 -->
-                <input name="files" type="file">
+                <input type="file" name="files">
                 <input type="button" name="upload" value="上传">
             </td>
+        </tr>
+        <tr>
+            <td>邮箱：</td>
+            <td><input type="email" name="email" required></td>
+        </tr>
+        <tr>
+            <td>URL：</td>
+            <td><input type="url" name="url"></td>
         </tr>
         <tr>
             <!-- 提交 -->
             <td><input type="submit"></td>
             <!-- 重置 -->
-            <td><input type="reset" value="清空表单"></td>
+            <td><input type="reset" value="清空表单" hidden></td>
         </tr>
     </table>
 </form>
